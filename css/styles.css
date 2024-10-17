@@ -4,7 +4,23 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Rethink Sans", sans-serif;
+    background-color: #FAFAFA;
+    color: #4A4A4A;
+    margin: 0;
+    text-align: center;
+}
+
+section {
+    padding: 2rem 0;
+}
+
 /*  TYPOGRAPHY STYLES */
+
+h1, h2, h3 {
+    color: #09032b;
+}
 
 h1 {
     font-size: 3rem;
@@ -12,8 +28,16 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.65rem;
     font-weight: 800;
+}
+
+#about h2 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: "Work Sans", sans-serif;
+    color: #4A4A4A;
 }
 
 h3 {
@@ -24,17 +48,10 @@ h3 {
 p {
     font-size: 1.2rem;
     line-height: 1.5;
+    font-family: "Work Sans", sans-serif;
 }
 
 /*  CUSTOM STYLES */
-
-body {
-    font-family: "Rethink Sans", sans-serif;
-    background-color: #FAFAFA;
-    color: #4A4A4A;
-    margin: 0;
-    text-align: center;
-}
 
 .container {
     width: 90%;
@@ -102,8 +119,10 @@ nav li a {
     padding-bottom: 1rem;
 }
 
-#contact {
-    padding: 2rem 0;
+#skills {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
 }
 
 #contact b {
@@ -128,34 +147,142 @@ footer nav {
     display: none;
 }
 
+footer a {
+    text-decoration: none;
+    color: #4A4A4A;
+}
+
 /*  MEDIA QUERIES */
 
 @media only screen and (min-width: 768px) {
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
 
 nav li {
     padding: 1rem 1rem;
     margin-bottom: 0;
     display: inline;
     background-color: #FAFAFA;
+    border-radius: 5px;
+}
+
+nav li:hover {
+    background-color: lightgrey;
 }
 
 #about {
-    padding: 2rem 0;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-#about p {
+#about h2 {
     order: 0;
     text-align: left;
-    margin-right: 2rem;
+    width: 52%;
+    margin: 0;
 }
 
 #about img {
     display: block;
     margin: 0;
-    max-width: 80%; 
+    width: 45%; 
     order: 1; 
 }
 
+#portfolio .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+.card {
+    width: 49%;
+}
+
+#skills .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#skills p {
+    text-align: left;
+}
+
+#contact .container {
+    max-width: 50%;
+}
+
+#backtotop {
+    display: none;
+}
+footer nav {
+    display: inline;
+}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about {
+    justify-content: space-between;
+}
+
+#about h2 {
+    width: 58%;
+    margin: 0;
+}
+
+#about img {
+    display: block;
+    margin: 0 0;
+    width: 40%;   
+}
+
+#portfolio .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 32%;
+}
+
+#skills .card {
+        width: 48%;
+}
+
+#contact .container {
+    max-width: 40%;
+}
+
+    }
